@@ -1,0 +1,156 @@
+% 本模板由松鼠制作
+% github地址:github.com/Sciurus365/PhysChemLab
+% 2017年10月13日
+
+\RequirePackage[l2tabu, orthodox]{nag}
+\documentclass[UTF8]{article}
+
+
+\usepackage{threeparttable}
+\usepackage[zihao=-4]{ctex}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage[a4paper]{geometry}
+\usepackage{booktabs}
+\usepackage{microtype}
+\usepackage{siunitx}
+\usepackage{ragged2e}
+\usepackage{fontspec}
+\usepackage{multirow}
+\usepackage{mhchem}
+\usepackage[square,sort,comma,numbers,super]{natbib}
+\usepackage{fancyhdr}
+\usepackage{url}
+
+
+
+
+
+\graphicspath{{figures/}}
+\geometry{left=2.0cm,right=2.0cm,top=2.0cm,bottom=2.0cm}
+\setmainfont{Times New Roman}
+
+\pagestyle{fancy}  
+\lhead{物理化学实验报告}  
+\chead{松鼠的制备纯化}  
+\rhead{2017年10月13日}  
+\lfoot{}  
+\cfoot{\thepage}  
+\rfoot{}  
+\renewcommand{\headrulewidth}{0.4pt}  
+\renewcommand{\footrulewidth}{0.4pt}  
+
+% 温度 电动势 浓度和气压的快速输入
+\newcommand{\swd}[1]{\SI{#1}{\degreeCelsius}}
+\newcommand{\sdds}[1]{\SI{#1}{\volt}}
+\newcommand{\snd}[1]{\SI{#1}{\mole \per \liter}}
+\newcommand{\sqy}[1]{\SI{#1}{\kilo \pascal}}
+
+
+
+
+
+
+
+\begin{document}
+	
+	\begin{titlepage}
+		\vspace*{1cm}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.7\linewidth]{logo}
+		\end{figure}
+		
+		\vspace*{0.5cm}
+		
+		\begin{center}
+			\Huge{\textbf{物理化学实验报告}}
+			
+			\Large{松鼠的制备纯化}
+		\end{center}
+		
+		\vspace*{0.5cm}
+		
+		\begin{table}[h]
+			\centering	
+			\begin{Large}
+				\begin{tabular}{p{3cm} p{7cm}<{\centering}}
+					姓\qquad 名: & 松鼠 \\
+					\hline
+					学\qquad 院: & 化学与分子工程学院 \\
+					\hline
+					学\qquad 号: & 1500011700 \\
+					\hline
+					分\qquad 组: & 第0组1号 \\
+					\hline
+					日\qquad 期: & 2017年10月13日 \\
+					\hline
+					室\qquad 温: & \swd{100}\\
+					\hline
+					气\qquad 压: & \sqy{100.0}\\
+					\hline
+					指导教师: & 吱吱吱\\
+					\hline
+				\end{tabular}
+			\end{Large}
+		\end{table}
+	
+	\vspace*{1cm}
+	
+	\textbf{摘要}\quad 本实验制备了松鼠并进行了纯化。
+	
+	\end{titlepage}
+
+	
+	
+	
+	\normalsize
+	\section{实验操作}
+	\subsection{实验药品及仪器}
+	
+	\subsection{实验步骤}
+	
+	\subsection{实验条件}
+	实验条件数据见表\ref{tiaojian}。
+	
+	%三线表示例
+	\begin{table}[htp]
+		\centering
+		\begin{threeparttable}
+			\caption{实验室不同时间的气温和气压}\label{tiaojian}
+			\begin{tabular} {lrr}
+				\toprule
+				时间 & 气温$T$/\si{\degreeCelsius} & 气压$p$/\si{\kilo\pascal}  \\
+				\midrule
+				1:00 & 100 & 100 \\
+				2:00 & 100 & 100 \\
+				3:00 & 100 & 100 \\
+				\quad 平均值 & 100* & 100 \\
+				\bottomrule
+			\end{tabular}
+		\small
+		注：注释。
+		\begin{tablenotes}
+			\item[*] 熟了
+		\end{tablenotes}
+		\end{threeparttable}
+	\end{table}
+	
+	\section{数据处理和结果}
+	
+
+	\section{思考与讨论}
+	
+	
+	
+	\section{实验结论}
+	
+
+	
+	\bibliographystyle{ieeetr}
+	\bibliography{mybib}
+	
+
+
+	
+\end{document}
