@@ -1,6 +1,9 @@
 % 本模板由松鼠制作
 % github地址:github.com/Sciurus365/PhysChemLab
-% 2017年10月13日
+% 2017年10月28日
+
+%推荐在编辑器窗口使用consolas+微软雅黑混合字体码代码==
+
 
 \RequirePackage[l2tabu, orthodox]{nag}
 \documentclass[UTF8]{article}
@@ -25,15 +28,16 @@
 
 
 
-
+% 纸张、页边距和英文默认字体设置
 \graphicspath{{figures/}}
 \geometry{left=2.0cm,right=2.0cm,top=2.0cm,bottom=2.0cm}
 \setmainfont{Times New Roman}
 
+% 页眉页脚设置
 \pagestyle{fancy}  
 \lhead{物理化学实验报告}  
 \chead{松鼠的制备纯化}  
-\rhead{2017年10月13日}  
+\rhead{2017年10月28日}  
 \lfoot{}  
 \cfoot{\thepage}  
 \rfoot{}  
@@ -45,6 +49,20 @@
 \newcommand{\sdds}[1]{\SI{#1}{\volt}}
 \newcommand{\snd}[1]{\SI{#1}{\mole \per \liter}}
 \newcommand{\sqy}[1]{\SI{#1}{\kilo \pascal}}
+% 摄氏度、公式中文本、\varepsilon的快速输入
+\newcommand{\C}{\si{\degreeCelsius}}
+\newcommand{\tr}[1]{\textrm{#1}}
+\newcommand{\ve}{\varepsilon}
+
+% 如果需要在三线表中插入竖线，请进行以下设置以避免竖线被割断
+%\belowrulesep=0ex
+%\aboverulesep=0ex
+
+% 使用siunitx包报告不确定度时，以下设置可以使结果以\bar(X) \pm \sigma 的形式表示
+\sisetup{
+	separate-uncertainty = true
+}
+
 
 
 
@@ -54,6 +72,7 @@
 
 \begin{document}
 	
+	%——————————封面页——————————
 	\begin{titlepage}
 		\vspace*{1cm}
 		\begin{figure}[h]
@@ -83,7 +102,7 @@
 					\hline
 					分\qquad 组: & 第0组1号 \\
 					\hline
-					日\qquad 期: & 2017年10月13日 \\
+					日\qquad 期: & 2017年10月28日 \\
 					\hline
 					室\qquad 温: & \swd{100}\\
 					\hline
@@ -103,10 +122,13 @@
 
 	
 	
-	
+	%——————————实验部分——————————
 	\normalsize
 	\section{实验操作}
 	\subsection{实验药品及仪器}
+	\textbf{药品} 
+	
+	\textbf{仪器} 
 	
 	\subsection{实验步骤}
 	
@@ -122,10 +144,9 @@
 				\toprule
 				时间 & 气温$T$/\si{\degreeCelsius} & 气压$p$/\si{\kilo\pascal}  \\
 				\midrule
-				1:00 & 100 & 100 \\
-				2:00 & 100 & 100 \\
-				3:00 & 100 & 100 \\
-				\quad 平均值 & 100* & 100 \\
+				1:00 & 100* & 100 \\
+				2:00 & 100* & 100 \\
+				3:00 & 100* & 100 \\
 				\bottomrule
 			\end{tabular}
 		\small
@@ -136,9 +157,13 @@
 		\end{threeparttable}
 	\end{table}
 	
+	
+	%——————————数据处理部分——————————
 	\section{数据处理和结果}
 	
-
+	
+	
+	%————————讨论部分——————————
 	\section{思考与讨论}
 	
 	
@@ -149,7 +174,9 @@
 	
 	\bibliographystyle{ieeetr}
 	\bibliography{mybib}
-	
+	% 原生bibtex对中文支持不好，请在bibtex文献库对中文文献做以下调整：
+	% 将作者以 “张三{, }李四{, }松鼠” 形式表示
+	% 将版本号输入在书名一栏 例如 “物理化学实验（第四版）”
 
 
 	
