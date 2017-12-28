@@ -1,6 +1,6 @@
 % 本模板由松鼠制作
 % github地址:github.com/Sciurus365/PhysChemLab
-% 2017年10月28日
+% 2017年12月28日
 
 %推荐在编辑器窗口使用consolas+微软雅黑混合字体码代码==
 
@@ -25,13 +25,21 @@
 \usepackage{fancyhdr}
 \usepackage{url}
 
+\usepackage{amsmath}%输入特殊数学符号
+\usepackage{float}%浮动体控制
+\usepackage[figuresright]{rotating}%竖排表格
 
 
-
-% 纸张、页边距和英文默认字体设置
+% 纸张、页边距设置
 \graphicspath{{figures/}}
 \geometry{left=2.0cm,right=2.0cm,top=2.0cm,bottom=2.0cm}
-\setmainfont{Times New Roman}
+
+% 统一全文英语字体
+\usepackage{unicode-math}
+\setmathfont{XITS Math}
+%\setmainfont{Times New Roman}
+\setmainfont{XITS Math}
+
 
 % 页眉页脚设置
 \pagestyle{fancy}  
@@ -62,7 +70,6 @@
 \sisetup{
 	separate-uncertainty = true
 }
-
 
 
 
@@ -102,7 +109,7 @@
 					\hline
 					分\qquad 组: & 第0组1号 \\
 					\hline
-					日\qquad 期: & 2017年10月28日 \\
+					日\qquad 期: & 2017年12月28日 \\
 					\hline
 					室\qquad 温: & \swd{100}\\
 					\hline
@@ -140,16 +147,16 @@
 		\centering
 		\begin{threeparttable}
 			\caption{实验室不同时间的气温和气压}\label{tiaojian}
+			\small %表格内容字号小一号
 			\begin{tabular} {lrr}
 				\toprule
-				时间 & 气温$T$/\si{\degreeCelsius} & 气压$p$/\si{\kilo\pascal}  \\
+				时间 & 气温$T$/\si{\degreeCelsius} & 气压$p$/\si{kPa}  \\
 				\midrule
 				1:00 & 100* & 100 \\
 				2:00 & 100* & 100 \\
 				3:00 & 100* & 100 \\
 				\bottomrule
 			\end{tabular}
-		\small
 		注：注释。
 		\begin{tablenotes}
 			\item[*] 熟了
