@@ -1,6 +1,6 @@
 % 本模板由松鼠制作
 % github地址:github.com/Sciurus365/PhysChemLab
-% 2017年12月28日
+% 2018年1月19日
 
 %推荐在编辑器窗口使用consolas+微软雅黑混合字体码代码==
 
@@ -45,7 +45,7 @@
 \pagestyle{fancy}  
 \lhead{物理化学实验报告}  
 \chead{松鼠的制备纯化}  
-\rhead{2017年10月28日}  
+\rhead{2018年1月19日}  
 \lfoot{}  
 \cfoot{\thepage}  
 \rfoot{}  
@@ -67,8 +67,10 @@
 %\aboverulesep=0ex
 
 % 使用siunitx包报告不确定度时，以下设置可以使结果以\bar(X) \pm \sigma 的形式表示
+% 使用siunitx包书写单位时，以下设置可以使单位之间加\cdot点
 \sisetup{
-	separate-uncertainty = true
+	separate-uncertainty = true,
+	inter-unit-product = \ensuremath{{}\cdot{}}
 }
 
 
@@ -109,7 +111,7 @@
 					\hline
 					分\qquad 组: & 第0组1号 \\
 					\hline
-					日\qquad 期: & 2017年12月28日 \\
+					日\qquad 期: & 2018年1月19日 \\
 					\hline
 					室\qquad 温: & \swd{100}\\
 					\hline
@@ -168,7 +170,23 @@
 	%——————————数据处理部分——————————
 	\section{数据处理和结果}
 	
+	数字和单位示例：
 	
+	\num{1.23e3}
+	
+	\si{J.mol^{-1}.K^{-1}}
+	
+	\SI{1.23e3}{J.mol^{-1}.K^{-1}}
+	
+	化学式示例:
+	
+	\ce{H2O}
+	
+	\ce{Al2(SO4)3}
+	
+	\ce{[Al(OH)4]^-}
+	
+	\ce{2H2 + O2 ->[\tr{cat.}] 2H2O}
 	
 	%————————讨论部分——————————
 	\section{思考与讨论}
